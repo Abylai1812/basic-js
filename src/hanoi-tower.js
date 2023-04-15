@@ -15,8 +15,8 @@ const { NotImplementedError } = require('../extensions/index.js');
  *
  */
 function calculateHanoi(diskNumber, turnsSpeed) {
-  const turns = Math.pow(2, diskNumber) - 1; // calculate the minimum number of turns required
-  const seconds = Math.floor(turns * 3600 / turnsSpeed); // calculate the minimum number of seconds required
+  const turns = Math.pow(2, diskNumber) - 1; 
+  const seconds = Math.floor(turns * 3600 / turnsSpeed); 
   return { turns, seconds };
 }
 

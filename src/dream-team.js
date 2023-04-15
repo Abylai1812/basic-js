@@ -14,19 +14,17 @@ const { NotImplementedError } = require('../extensions/index.js');
  *
  */
 function createDreamTeam(members) {
-  // проверяем, что параметр members является массивом
+  
   if (!Array.isArray(members)) {
     return false;
   }
   
-  // отфильтровываем массив members так, чтобы в нем остались только строки
   const filteredMembers = members.filter(member => typeof member === 'string');
   
-  // производим преобразование каждого имени участника в название команды
   const dreamTeamName = filteredMembers.map(member => {
-    // получаем первую букву имени без учета пробелов
+    
     const firstLetter = member.trim().charAt(0);
-    // преобразуем первую букву в верхний регистр
+   
     return firstLetter.toUpperCase();
   });
   
